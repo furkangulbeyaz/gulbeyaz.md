@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gulbeyaz.md — Ayarlar</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header style="text-align: center;">
+        <div class="logo-container">
+          <img src="icon.png" alt="gulbeyaz.md Logo" class="glow-logo" />
+        </div>
+        <h1>gulbeyaz.md</h1>
+        <p class="subtitle">API anahtarınız yalnızca tarayıcınızda saklanır; hiçbir sunucuya gönderilmez.</p>
+      </header>
+
+      <form id="settings-form">
+        <div class="field">
+          <label for="provider">Yapay Zeka Sağlayıcısı</label>
+          <select id="provider" name="provider">
+            <option value="openai">OpenAI</option>
+            <option value="gemini">Google Gemini</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="api-key" id="api-key-label">API Anahtarı</label>
+          <div class="input-row">
+            <input
+              type="password"
+              id="api-key"
+              name="apiKey"
+              placeholder="sk-..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button type="button" id="toggle-key" class="btn-secondary" aria-label="Anahtarı göster">
+              Göster
+            </button>
+          </div>
+          <p class="hint" id="api-key-hint">
+            Anahtarınızı
+            <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">
+              OpenAI Platform
+            </a>
+            üzerinden oluşturabilirsiniz.
+          </p>
+        </div>
+
+        <div class="field">
+          <label for="model">Model</label>
+          <select id="model" name="model">
+          <!-- options.js tarafından dinamik olarak doldurulur -->
+          </select>
+        </div>
+
+        <fieldset class="field-group">
+          <legend>Görsel Analiz (Vision)</legend>
+
+          <label class="checkbox">
+            <input type="checkbox" id="enable-vision" name="enableVision" checked />
+            Ekran görüntüsünü API'ye gönder (padding, renk, tipografi analizi)
+          </label>
+
+          <div class="field">
+            <label for="screenshot-mode">Screenshot modu</label>
+            <select id="screenshot-mode" name="screenshotMode">
+              <option value="viewport">Görünür alan (tam ekran)</option>
+              <option value="selection">Seçili alan (sürükle-bırak)</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend>Çıktı &amp; Diff</legend>
+
+          <div class="field">
+            <label for="output-format">İndirme formatı</label>
+            <select id="output-format" name="outputFormat">
+              <option value="both">Markdown + Next.js ZIP</option>
+              <option value="markdown">Yalnızca Markdown (.md)</option>
+              <option value="zip">Yalnızca Next.js ZIP</option>
+            </select>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" id="enable-diff" name="enableDiff" checked />
+            Live Diff Checker — önceki analizle karşılaştır
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">Kaydet</button>
+        </div>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>

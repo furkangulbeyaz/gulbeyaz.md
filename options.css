@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #000000;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 520px;
+  margin: 48px auto;
+  padding: 32px;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  color: #cccccc;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.field {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.input-row {
+  display: flex;
+  gap: 12px;
+}
+
+input[type="password"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 14px;
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.hint {
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+}
+
+.hint a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 2px;
+  transition: text-shadow 0.3s ease;
+}
+
+.hint a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.actions {
+  margin-top: 32px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary:hover {
+  background: #f0f0f0;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  flex-shrink: 0;
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.status {
+  min-height: 1.25rem;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status.success {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.status.error {
+  color: #ff3333;
+  text-shadow: 0 0 10px rgba(255, 51, 51, 0.7);
+}
+
+.field-group {
+  margin: 28px 0;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.field-group:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.field-group legend {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0 8px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 14px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  cursor: pointer;
+  color: #eeeeee;
+  transition: text-shadow 0.3s ease;
+}
+
+.checkbox:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.checkbox input {
+  margin-top: 3px;
+  accent-color: #ffffff;
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.glow-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  animation: breathe 3s infinite alternate ease-in-out;
+  background-color: #000000;
+}
+
+@keyframes breathe {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.6);
+  }
+}

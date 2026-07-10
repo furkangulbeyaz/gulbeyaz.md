@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "gulbeyaz.md",
+  "version": "1.2.0",
+  "description": "Analyze web pages with Vision AI, diff tracking, and one-click Next.js ZIP scaffolding.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": ["https://api.openai.com/*", "https://generativelanguage.googleapis.com/*"],
+  "options_page": "options.html",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_title": "Ayarları Aç",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
